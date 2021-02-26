@@ -9,11 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var canvasView: CanvasView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupView()
     }
 
+    private func setupView() {
+        canvasView.layer.allowsEdgeAntialiasing = true
+        canvasView.layer.allowsGroupOpacity = true
+        canvasView.layer.masksToBounds = true
+        canvasView.layer.cornerRadius = 3
+    }
 
 }
 
