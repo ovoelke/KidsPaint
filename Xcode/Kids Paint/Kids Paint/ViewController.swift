@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var canvasView: CanvasView!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -22,6 +23,29 @@ class ViewController: UIViewController {
         canvasView.layer.masksToBounds = true
         canvasView.layer.cornerRadius = 3
     }
-
+    
+    @IBAction func PenBlackAction(_ sender: Any) {
+        canvasView.setLineColor(.black)
+    }
+    
+    @IBAction func PenBlueAction(_ sender: Any) {
+        canvasView.setLineColor(.blue)
+    }
+    
+    @IBAction func PenRedAction(_ sender: Any) {
+        canvasView.setLineColor(.red)
+    }
+    
+    @IBAction func PenGreenAction(_ sender: Any) {
+        canvasView.setLineColor(.green)
+    }
+    
+    @IBAction func DeleteAction(_ sender: Any) {
+        canvasView.clear()
+    }
+    
+    @IBAction func UndoAction(_ sender: Any) {
+        canvasView.undo()
+    }
 }
 

@@ -9,19 +9,30 @@ import UIKit
 
 class CanvasView : UIView {
     
-    var lines = [[CGPoint]]()
+    fileprivate var lineColor: CGColor = UIColor.black.cgColor
+    fileprivate var lineWidth: CGFloat = 10
+    
+    func setLineColor(_ newColor: UIColor) {
+        lineColor = newColor.cgColor
+    }
+    
+    func setLineWidth(_ newWidth: Float) {
+        lineWidth = CGFloat(newWidth)
+    }
+    
+    //var lines = [[CGPoint]]()
+    var lines = [CanvasLine]()
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
-        context.setStrokeColor(UIColor.red.cgColor)
-        context.setLineWidth(10)
-        context.setLineCap(.butt)
-        
         lines.forEach { (line) in
-            for (i, p) in line.enumerated() {
+            context.setLineCap(.butt)
+            context.setStrokeColor(line.color)
+            context.setLineWidth(line.width)
+            for (i, p) in line.position.enumerated() {
                 if i == 0 {
                     context.move(to: p)
                 }
@@ -29,20 +40,30 @@ class CanvasView : UIView {
                     context.addLine(to: p)
                 }
             }
+            context.strokePath()
         }
-        context.strokePath()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let point = [CGPoint]()
-        lines.append(point)
+        let line  = CanvasLine.init(color: lineColor, width: lineWidth, position: [])
+        lines.append(line)
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let point = touches.first?.location(in: self) else { return }
+        guard let position = touches.first?.location(in: self) else { return }
         guard var lastLine = lines.popLast() else { return }
-        lastLine.append(point)
+        lastLine.position.append(position)
         lines.append(lastLine)
+        setNeedsDisplay()
+    }
+    
+    func undo() {
+        _ = lines.popLast()
+        setNeedsDisplay()
+    }
+    
+    func clear() {
+        lines.removeAll()
         setNeedsDisplay()
     }
 }

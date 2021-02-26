@@ -13,6 +13,7 @@
 		330545CA25E854CF009B73C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330545C825E854CF009B73C3 /* Main.storyboard */; };
 		330545CC25E854D0009B73C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330545CB25E854D0009B73C3 /* Assets.xcassets */; };
 		330545CF25E854D0009B73C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330545CD25E854D0009B73C3 /* LaunchScreen.storyboard */; };
+		3374CFA125E9479B0061C5BB /* CanvasLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374CFA025E9479B0061C5BB /* CanvasLine.swift */; };
 		339E932625E90094005AC296 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E932525E90094005AC296 /* CanvasView.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		330545CB25E854D0009B73C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		330545CE25E854D0009B73C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		330545D025E854D0009B73C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3374CFA025E9479B0061C5BB /* CanvasLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasLine.swift; sourceTree = "<group>"; };
 		339E932525E90094005AC296 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +60,7 @@
 		330545C125E854CF009B73C3 /* Kids Paint */ = {
 			isa = PBXGroup;
 			children = (
+				3374CF9F25E9478B0061C5BB /* Models */,
 				3370767025E910CF00236A3F /* Views */,
 				330545C225E854CF009B73C3 /* AppDelegate.swift */,
 				330545C425E854CF009B73C3 /* SceneDelegate.swift */,
@@ -76,6 +79,14 @@
 				339E932525E90094005AC296 /* CanvasView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3374CF9F25E9478B0061C5BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3374CFA025E9479B0061C5BB /* CanvasLine.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				330545C725E854CF009B73C3 /* ViewController.swift in Sources */,
+				3374CFA125E9479B0061C5BB /* CanvasLine.swift in Sources */,
 				330545C325E854CF009B73C3 /* AppDelegate.swift in Sources */,
 				339E932625E90094005AC296 /* CanvasView.swift in Sources */,
 				330545C525E854CF009B73C3 /* SceneDelegate.swift in Sources */,
