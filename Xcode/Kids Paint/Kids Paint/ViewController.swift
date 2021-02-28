@@ -10,11 +10,16 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var canvasView: CanvasView!
+    @IBOutlet weak var penCollectionView: PenCollectionView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
+        penCollectionView.selectedPenHasChanged = (() -> Void)? { [self] in
+            self.canvasView.setLineColor(penCollectionView.selectedPen.color)
+        }
     }
 
     private func setupView() {
@@ -22,22 +27,13 @@ class ViewController: UIViewController {
         canvasView.layer.allowsGroupOpacity = true
         canvasView.layer.masksToBounds = true
         canvasView.layer.cornerRadius = 3
-    }
-    
-    @IBAction func PenBlackAction(_ sender: Any) {
-        canvasView.setLineColor(.black)
-    }
-    
-    @IBAction func PenBlueAction(_ sender: Any) {
-        canvasView.setLineColor(.blue)
-    }
-    
-    @IBAction func PenRedAction(_ sender: Any) {
-        canvasView.setLineColor(.red)
-    }
-    
-    @IBAction func PenGreenAction(_ sender: Any) {
-        canvasView.setLineColor(.green)
+        
+        let penBackgroundImageView = UIImageView()
+        penBackgroundImageView.image = UIImage(named: "PenBackground")
+        penBackgroundImageView.contentMode = .scaleToFill
+        
+        penCollectionView.backgroundColor = UIColor.clear.withAlphaComponent(0)
+        penCollectionView.backgroundView = penBackgroundImageView
     }
     
     @IBAction func DeleteAction(_ sender: Any) {

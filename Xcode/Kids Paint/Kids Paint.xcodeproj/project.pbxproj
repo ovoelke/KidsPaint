@@ -13,6 +13,11 @@
 		330545CA25E854CF009B73C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330545C825E854CF009B73C3 /* Main.storyboard */; };
 		330545CC25E854D0009B73C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330545CB25E854D0009B73C3 /* Assets.xcassets */; };
 		330545CF25E854D0009B73C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330545CD25E854D0009B73C3 /* LaunchScreen.storyboard */; };
+		333CFAC225EAF2D00088107B /* PenCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333CFAC125EAF2D00088107B /* PenCollectionView.swift */; };
+		333CFACB25EBE0BC0088107B /* Pens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333CFACA25EBE0BC0088107B /* Pens.swift */; };
+		333CFACF25EC05A80088107B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333CFACE25EC05A80088107B /* UIColor+Extension.swift */; };
+		333CFAD525EC4D210088107B /* PenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333CFAD425EC4D210088107B /* PenCell.xib */; };
+		333CFAD825EC4D9C0088107B /* PenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333CFAD725EC4D9C0088107B /* PenCell.swift */; };
 		3374CFA125E9479B0061C5BB /* CanvasLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374CFA025E9479B0061C5BB /* CanvasLine.swift */; };
 		339E932625E90094005AC296 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E932525E90094005AC296 /* CanvasView.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +31,11 @@
 		330545CB25E854D0009B73C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		330545CE25E854D0009B73C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		330545D025E854D0009B73C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		333CFAC125EAF2D00088107B /* PenCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenCollectionView.swift; sourceTree = "<group>"; };
+		333CFACA25EBE0BC0088107B /* Pens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pens.swift; sourceTree = "<group>"; };
+		333CFACE25EC05A80088107B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		333CFAD425EC4D210088107B /* PenCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PenCell.xib; sourceTree = "<group>"; };
+		333CFAD725EC4D9C0088107B /* PenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenCell.swift; sourceTree = "<group>"; };
 		3374CFA025E9479B0061C5BB /* CanvasLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasLine.swift; sourceTree = "<group>"; };
 		339E932525E90094005AC296 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +70,7 @@
 		330545C125E854CF009B73C3 /* Kids Paint */ = {
 			isa = PBXGroup;
 			children = (
+				333CFACD25EC059A0088107B /* Extensions */,
 				3374CF9F25E9478B0061C5BB /* Models */,
 				3370767025E910CF00236A3F /* Views */,
 				330545C225E854CF009B73C3 /* AppDelegate.swift */,
@@ -73,10 +84,21 @@
 			path = "Kids Paint";
 			sourceTree = "<group>";
 		};
+		333CFACD25EC059A0088107B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				333CFACE25EC05A80088107B /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3370767025E910CF00236A3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				339E932525E90094005AC296 /* CanvasView.swift */,
+				333CFAC125EAF2D00088107B /* PenCollectionView.swift */,
+				333CFAD425EC4D210088107B /* PenCell.xib */,
+				333CFAD725EC4D9C0088107B /* PenCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				3374CFA025E9479B0061C5BB /* CanvasLine.swift */,
+				333CFACA25EBE0BC0088107B /* Pens.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,6 +172,7 @@
 				330545CF25E854D0009B73C3 /* LaunchScreen.storyboard in Resources */,
 				330545CC25E854D0009B73C3 /* Assets.xcassets in Resources */,
 				330545CA25E854CF009B73C3 /* Main.storyboard in Resources */,
+				333CFAD525EC4D210088107B /* PenCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,10 +184,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				330545C725E854CF009B73C3 /* ViewController.swift in Sources */,
+				333CFAD825EC4D9C0088107B /* PenCell.swift in Sources */,
 				3374CFA125E9479B0061C5BB /* CanvasLine.swift in Sources */,
 				330545C325E854CF009B73C3 /* AppDelegate.swift in Sources */,
 				339E932625E90094005AC296 /* CanvasView.swift in Sources */,
+				333CFAC225EAF2D00088107B /* PenCollectionView.swift in Sources */,
 				330545C525E854CF009B73C3 /* SceneDelegate.swift in Sources */,
+				333CFACB25EBE0BC0088107B /* Pens.swift in Sources */,
+				333CFACF25EC05A80088107B /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

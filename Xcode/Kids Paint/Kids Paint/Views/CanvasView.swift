@@ -12,15 +12,14 @@ class CanvasView : UIView {
     fileprivate var lineColor: CGColor = UIColor.black.cgColor
     fileprivate var lineWidth: CGFloat = 10
     
-    func setLineColor(_ newColor: UIColor) {
-        lineColor = newColor.cgColor
+    func setLineColor(_ newColor: CGColor) {
+        lineColor = newColor
     }
     
     func setLineWidth(_ newWidth: Float) {
         lineWidth = CGFloat(newWidth)
     }
     
-    //var lines = [[CGPoint]]()
     var lines = [CanvasLine]()
     
     override func draw(_ rect: CGRect) {
