@@ -20,7 +20,7 @@ class PenCollectionView : UICollectionView, UICollectionViewDataSource, UICollec
     
     var selectedPen: Pen {
         get {
-            return Pencils[selectedPenIndex]
+            return PenColors[selectedPenIndex]
         }
     }
     
@@ -44,14 +44,14 @@ class PenCollectionView : UICollectionView, UICollectionViewDataSource, UICollec
     // MARK: DataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Pencils.count
+        return PenColors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PenCell else { return UICollectionViewCell() }
         
-        cell.imageView.image = UIImage(named: Pencils[indexPath.row].imageName)
+        cell.imageView.image = UIImage(named: PenColors[indexPath.row].imageName)
         
         return cell
     }

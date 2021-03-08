@@ -7,7 +7,7 @@
 
 import UIKit
 
-public let Pencils: [Pen] = [
+public let PenColors: [Pen] = [
     Pen(imageName: "PenBlack",
         color: UIColor(hex: "#000000FF")!.cgColor),
     

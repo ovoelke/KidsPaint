@@ -52,11 +52,48 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1M-O2-Goa">
+                                <rect key="frame" x="28" y="112.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Pby-Ex-uae"/>
+                                    <constraint firstAttribute="width" constant="80" id="cLU-VU-KBZ"/>
+                                </constraints>
+                                <state key="normal" image="ToolPenActive"/>
+                                <connections>
+                                    <action selector="ToolPenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u5H-Hd-7Gu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwD-2c-keN">
+                                <rect key="frame" x="28" y="212.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="LHO-VI-TiH"/>
+                                    <constraint firstAttribute="width" constant="80" id="caG-Gm-foQ"/>
+                                </constraints>
+                                <state key="normal" image="ToolOvalInactive"/>
+                                <connections>
+                                    <action selector="ToolOvalAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LII-Hs-UbA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASO-TY-vwM">
+                                <rect key="frame" x="28" y="312.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Koi-Tu-f1b"/>
+                                    <constraint firstAttribute="width" constant="80" id="aat-sD-1US"/>
+                                </constraints>
+                                <state key="normal" image="ToolRectInactive"/>
+                                <connections>
+                                    <action selector="ToolRectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7FH-Ld-QGw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="ViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="WkV-0y-L2S" firstAttribute="leading" secondItem="g1M-O2-Goa" secondAttribute="trailing" constant="20" id="1mF-qq-xWZ"/>
+                            <constraint firstItem="WkV-0y-L2S" firstAttribute="leading" secondItem="ASO-TY-vwM" secondAttribute="trailing" constant="20" id="9wX-xL-y2v"/>
                             <constraint firstItem="WkV-0y-L2S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="Fsq-p4-9do"/>
+                            <constraint firstItem="WkV-0y-L2S" firstAttribute="leading" secondItem="vwD-2c-keN" secondAttribute="trailing" constant="20" id="IZf-hn-ZeP"/>
+                            <constraint firstItem="ASO-TY-vwM" firstAttribute="top" secondItem="vwD-2c-keN" secondAttribute="bottom" constant="20" id="JC1-Yr-Tqq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WkV-0y-L2S" secondAttribute="trailing" constant="64" id="MOx-vL-hnr"/>
                             <constraint firstItem="WkV-0y-L2S" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="Qxx-nX-kht"/>
                             <constraint firstItem="xT6-iv-5Ay" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c72-z0-Lkq"/>
@@ -64,15 +101,20 @@
                             <constraint firstItem="WkV-0y-L2S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hWs-WF-dVh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OBd-k6-v0g" secondAttribute="trailing" constant="32" id="j6B-Fl-RCj"/>
                             <constraint firstItem="9No-iq-vF7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="jWa-4o-0Ww"/>
+                            <constraint firstItem="vwD-2c-keN" firstAttribute="top" secondItem="g1M-O2-Goa" secondAttribute="bottom" constant="20" id="pHZ-au-Pyl"/>
                             <constraint firstItem="OBd-k6-v0g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="sVp-Sy-jqD"/>
                             <constraint firstItem="xT6-iv-5Ay" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="t2g-yZ-Cck"/>
                             <constraint firstItem="OBd-k6-v0g" firstAttribute="leading" secondItem="9No-iq-vF7" secondAttribute="trailing" constant="16" id="wHw-ta-v2c"/>
                             <constraint firstItem="WkV-0y-L2S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xEY-E5-D9l"/>
+                            <constraint firstItem="g1M-O2-Goa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="112.5" id="zQF-p7-AL9"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="canvasView" destination="WkV-0y-L2S" id="fZh-NH-SvQ"/>
                         <outlet property="penCollectionView" destination="xT6-iv-5Ay" id="oEE-0e-fa1"/>
+                        <outlet property="toolOvalButton" destination="vwD-2c-keN" id="ylf-fG-ZmA"/>
+                        <outlet property="toolPenButton" destination="g1M-O2-Goa" id="yLb-Wp-vR8"/>
+                        <outlet property="toolRectButton" destination="ASO-TY-vwM" id="Syj-zg-Vrs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -81,6 +123,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ToolOvalInactive" width="80" height="80"/>
+        <image name="ToolPenActive" width="80" height="80"/>
+        <image name="ToolRectInactive" width="80" height="80"/>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="CanvasBackgroundColor">
