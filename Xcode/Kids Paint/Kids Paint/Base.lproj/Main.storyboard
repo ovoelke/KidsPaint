@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <device id="ipad10_2" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -13,18 +13,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kids_Paint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkV-0y-L2S" customClass="CanvasView" customModule="Kids_Paint" customModuleProvider="target">
-                                <rect key="frame" x="128" y="112.5" width="768" height="543"/>
+                                <rect key="frame" x="135" y="118.5" width="810" height="573"/>
                                 <color key="backgroundColor" name="canvasBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WkV-0y-L2S" secondAttribute="height" multiplier="297:210" id="dNq-bs-x7x"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBd-k6-v0g">
-                                <rect key="frame" x="972" y="32" width="20" height="22"/>
+                                <rect key="frame" x="1028" y="32" width="20" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" image="trash" catalog="system"/>
                                 <connections>
@@ -32,14 +32,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9No-iq-vF7">
-                                <rect key="frame" x="935" y="32" width="21" height="22"/>
+                                <rect key="frame" x="991" y="32" width="21" height="22"/>
                                 <state key="normal" image="arrowshape.turn.up.left" catalog="system"/>
                                 <connections>
                                     <action selector="UndoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IRQ-32-pja"/>
                                 </connections>
                             </button>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xT6-iv-5Ay" customClass="PenCollectionView" customModule="Kids_Paint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="666" width="1024" height="102"/>
+                                <rect key="frame" x="0.0" y="708" width="1080" height="102"/>
                                 <color key="backgroundColor" name="canvasBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="wol-6Q-SPI"/>
@@ -53,7 +53,7 @@
                                 <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1M-O2-Goa">
-                                <rect key="frame" x="28" y="112.5" width="80" height="80"/>
+                                <rect key="frame" x="35" y="112.5" width="80" height="80"/>
                                 <accessibility key="accessibilityConfiguration" identifier="penTool"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Pby-Ex-uae"/>
@@ -65,7 +65,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwD-2c-keN">
-                                <rect key="frame" x="28" y="212.5" width="80" height="80"/>
+                                <rect key="frame" x="35" y="212.5" width="80" height="80"/>
                                 <accessibility key="accessibilityConfiguration" identifier="ovalTool"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="LHO-VI-TiH"/>
@@ -77,7 +77,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASO-TY-vwM">
-                                <rect key="frame" x="28" y="312.5" width="80" height="80"/>
+                                <rect key="frame" x="35" y="312.5" width="80" height="80"/>
                                 <accessibility key="accessibilityConfiguration" identifier="rectTool"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Koi-Tu-f1b"/>

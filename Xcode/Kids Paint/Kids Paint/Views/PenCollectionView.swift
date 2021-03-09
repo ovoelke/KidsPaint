@@ -41,6 +41,15 @@ class PenCollectionView : UICollectionView, UICollectionViewDataSource, UICollec
         reloadData()
     }
     
+    override func selectItem(at indexPath: IndexPath?, animated: Bool, scrollPosition: UICollectionView.ScrollPosition) {
+        super.selectItem(at: indexPath, animated: animated, scrollPosition: scrollPosition)
+        guard let index = indexPath?.row else {
+            return
+        }
+        selectedPenIndex = index
+        selectedPenColorHasChanged?()
+    }
+    
     // MARK: DataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

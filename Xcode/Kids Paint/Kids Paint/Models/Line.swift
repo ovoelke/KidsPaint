@@ -11,4 +11,5 @@ struct Line {
     let color: CGColor
     let width: CGFloat
     var position: [CGPoint]
+    var cap: CGLineCap
 }

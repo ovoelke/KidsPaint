@@ -37,6 +37,7 @@ class ViewController: UIViewController {
     
     private var selectedTool: Tool = .penTool {
         didSet {
+            canvasView.setDrawingTool(selectedTool)
             for view in view.subviews {
                 if let button = view as? UIButton,
                    let id = button.accessibilityIdentifier {
@@ -66,8 +67,9 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         selectedTool = .penTool
+        penCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .top)
     }
-
+    
     private func setupView() {
         canvasView.layer.allowsEdgeAntialiasing = true
         canvasView.layer.allowsGroupOpacity = true
