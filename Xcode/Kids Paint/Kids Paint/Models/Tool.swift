@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum CanvasTool {
-    case pen
-    case oval
-    case rect
+enum Tool : String {
+    case penTool
+    case ovalTool
+    case rectTool
 }

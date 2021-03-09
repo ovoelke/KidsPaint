@@ -18,7 +18,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkV-0y-L2S" customClass="CanvasView" customModule="Kids_Paint" customModuleProvider="target">
                                 <rect key="frame" x="128" y="112.5" width="768" height="543"/>
-                                <color key="backgroundColor" name="CanvasBackgroundColor"/>
+                                <color key="backgroundColor" name="canvasBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WkV-0y-L2S" secondAttribute="height" multiplier="297:210" id="dNq-bs-x7x"/>
                                 </constraints>
@@ -40,7 +40,7 @@
                             </button>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xT6-iv-5Ay" customClass="PenCollectionView" customModule="Kids_Paint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="666" width="1024" height="102"/>
-                                <color key="backgroundColor" name="CanvasBackgroundColor"/>
+                                <color key="backgroundColor" name="canvasBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="wol-6Q-SPI"/>
                                 </constraints>
@@ -54,40 +54,43 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1M-O2-Goa">
                                 <rect key="frame" x="28" y="112.5" width="80" height="80"/>
+                                <accessibility key="accessibilityConfiguration" identifier="penTool"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Pby-Ex-uae"/>
                                     <constraint firstAttribute="width" constant="80" id="cLU-VU-KBZ"/>
                                 </constraints>
-                                <state key="normal" image="ToolPenActive"/>
+                                <state key="normal" image="penToolInactive"/>
                                 <connections>
                                     <action selector="ToolPenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u5H-Hd-7Gu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwD-2c-keN">
                                 <rect key="frame" x="28" y="212.5" width="80" height="80"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ovalTool"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="LHO-VI-TiH"/>
                                     <constraint firstAttribute="width" constant="80" id="caG-Gm-foQ"/>
                                 </constraints>
-                                <state key="normal" image="ToolOvalInactive"/>
+                                <state key="normal" image="ovalToolInactive"/>
                                 <connections>
                                     <action selector="ToolOvalAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LII-Hs-UbA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASO-TY-vwM">
                                 <rect key="frame" x="28" y="312.5" width="80" height="80"/>
+                                <accessibility key="accessibilityConfiguration" identifier="rectTool"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Koi-Tu-f1b"/>
                                     <constraint firstAttribute="width" constant="80" id="aat-sD-1US"/>
                                 </constraints>
-                                <state key="normal" image="ToolRectInactive"/>
+                                <state key="normal" image="rectToolInactive"/>
                                 <connections>
                                     <action selector="ToolRectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7FH-Ld-QGw"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="ViewBackgroundColor"/>
+                        <color key="backgroundColor" name="viewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WkV-0y-L2S" firstAttribute="leading" secondItem="g1M-O2-Goa" secondAttribute="trailing" constant="20" id="1mF-qq-xWZ"/>
                             <constraint firstItem="WkV-0y-L2S" firstAttribute="leading" secondItem="ASO-TY-vwM" secondAttribute="trailing" constant="20" id="9wX-xL-y2v"/>
@@ -123,15 +126,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ToolOvalInactive" width="80" height="80"/>
-        <image name="ToolPenActive" width="80" height="80"/>
-        <image name="ToolRectInactive" width="80" height="80"/>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
+        <image name="ovalToolInactive" width="80" height="80"/>
+        <image name="penToolInactive" width="80" height="80"/>
+        <image name="rectToolInactive" width="80" height="80"/>
         <image name="trash" catalog="system" width="121" height="128"/>
-        <namedColor name="CanvasBackgroundColor">
+        <namedColor name="canvasBackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="ViewBackgroundColor">
+        <namedColor name="viewBackgroundColor">
             <color red="0.85900002717971802" green="0.84299999475479126" blue="0.81599998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>

@@ -14,7 +14,7 @@ class PenCollectionView : UICollectionView, UICollectionViewDataSource, UICollec
     
     private var selectedPenIndex: Int = 0 {
         didSet {
-            selectedPenHasChanged?()
+            selectedPenColorHasChanged?()
         }
     }
     
@@ -24,7 +24,7 @@ class PenCollectionView : UICollectionView, UICollectionViewDataSource, UICollec
         }
     }
     
-    var selectedPenHasChanged: (() -> Void)?
+    var selectedPenColorHasChanged: (() -> Void)?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

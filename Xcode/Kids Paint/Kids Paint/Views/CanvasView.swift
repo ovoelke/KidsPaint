@@ -20,7 +20,7 @@ class CanvasView : UIView {
         lineWidth = CGFloat(newWidth)
     }
     
-    var lines = [CanvasLine]()
+    var lines = [Line]()
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -44,7 +44,7 @@ class CanvasView : UIView {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let line  = CanvasLine.init(color: lineColor, width: lineWidth, position: [])
+        let line  = Line.init(color: lineColor, width: lineWidth, position: [])
         lines.append(line)
     }
     

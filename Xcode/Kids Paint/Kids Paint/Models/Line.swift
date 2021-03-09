@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct CanvasLine {
+struct Line {
     let color: CGColor
     let width: CGFloat
     var position: [CGPoint]
