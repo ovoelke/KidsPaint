@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Tool : String {
+public enum Tool : String {
     case penTool
     case ovalTool
     case rectTool

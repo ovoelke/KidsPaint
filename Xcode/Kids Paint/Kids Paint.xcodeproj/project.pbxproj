@@ -20,6 +20,7 @@
 		333CFACF25EC05A80088107B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333CFACE25EC05A80088107B /* UIColor+Extension.swift */; };
 		333CFAD525EC4D210088107B /* PenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333CFAD425EC4D210088107B /* PenCell.xib */; };
 		333CFAD825EC4D9C0088107B /* PenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333CFAD725EC4D9C0088107B /* PenCell.swift */; };
+		335A8DE025FF938B0017627C /* Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335A8DDF25FF938B0017627C /* Drag.swift */; };
 		3374CFA125E9479B0061C5BB /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374CFA025E9479B0061C5BB /* Line.swift */; };
 		339E932625E90094005AC296 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E932525E90094005AC296 /* CanvasView.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		333CFACE25EC05A80088107B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		333CFAD425EC4D210088107B /* PenCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PenCell.xib; sourceTree = "<group>"; };
 		333CFAD725EC4D9C0088107B /* PenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenCell.swift; sourceTree = "<group>"; };
+		335A8DDF25FF938B0017627C /* Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drag.swift; sourceTree = "<group>"; };
 		3374CFA025E9479B0061C5BB /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		339E932525E90094005AC296 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 				333CFACA25EBE0BC0088107B /* Pen.swift */,
 				3339A1B725ECD6BD00E93709 /* PenColors.swift */,
 				3300BEE725F6B76600293F4B /* Tool.swift */,
+				335A8DDF25FF938B0017627C /* Drag.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				330545C725E854CF009B73C3 /* ViewController.swift in Sources */,
 				333CFAD825EC4D9C0088107B /* PenCell.swift in Sources */,
 				3374CFA125E9479B0061C5BB /* Line.swift in Sources */,
+				335A8DE025FF938B0017627C /* Drag.swift in Sources */,
 				330545C325E854CF009B73C3 /* AppDelegate.swift in Sources */,
 				3339A1B825ECD6BD00E93709 /* PenColors.swift in Sources */,
 				339E932625E90094005AC296 /* CanvasView.swift in Sources */,

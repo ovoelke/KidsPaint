@@ -7,9 +7,10 @@
 
 import UIKit
 
-struct Line {
+public struct Line {
     let color: CGColor
     let width: CGFloat
+    let tool: Tool
     var position: [CGPoint]
     var cap: CGLineCap
 }
